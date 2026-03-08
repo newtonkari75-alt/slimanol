@@ -7,21 +7,12 @@
     <!-- Gateraads Tracking Script -->
     <script src="https://cdn.gateraads.com/code/8300-f8e4d703-2fb3-4b2d-840f-1593c2721f36"></script>
     
-    <!-- Título otimizado para SEO -->
     <title>Slimanol Erfahrungen & Bewertung: Inhaltsstoffe der Kapsel und Zusammensetzung</title>
     <meta name="description" content="Slimanol Bewertung & Erfahrungen: Entdecken Sie die Inhaltsstoffe da Kapsel (Chrom, Berberin, EGCG, Mariendistel). Liposomale Zusammensetzung zur Unterstützung des Stoffwechsels.">
     <meta name="author" content="Slimanol Independent Distributor">
     
-    <!-- SEO & Canonicals -->
     <link rel="canonical" href="https://slimanol24.vercel.app/" />
     
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://slimanol24.vercel.app/">
-    <meta property="og:title" content="Slimanol: Natürliche Unterstützung für Ihren Stoffwechsel">
-    <meta property="og:description" content="Erfahren Sie alles über Slimanol Kapseln: Inhaltsstoffe, Erfahrungen und die liposomale Formel.">
-    <meta property="og:image" content="https://slimanol24.vercel.app/imgi_2_public.webp">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,11 +31,8 @@
                         brand: {
                             navy: '#242c5c',
                             teal: '#3c4ab5',
-                            tealLight: '#5a68d4',
                             gold: '#b8c54c',
-                            goldHover: '#a3b137',
                             offWhite: '#f8fafc',
-                            textLight: '#e2e8f0',
                             muted: '#64748b',
                         }
                     }
@@ -65,12 +53,6 @@
         .faq-item .faq-icon { transition: transform 0.3s ease; }
         .faq-item.open .faq-icon { transform: rotate(45deg); color: #b8c54c; }
         
-        .btn-cta { background: #b8c54c; color: #242c5c; font-weight: 800; letter-spacing: 0.05em; display: inline-flex; align-items: center; justify-content: center; transition: all 0.2s ease; border-radius: 8px; }
-        .btn-cta:hover { background: #a3b137; transform: translateY(-2px); box-shadow: 0 12px 28px rgba(184, 197, 76, 0.4); }
-        .star-gold { color: #f0c040; }
-        .country-card { transition: transform 0.2s ease, box-shadow 0.2s ease; border: 2px solid #f1f5f9; }
-        .country-card:hover { transform: translateY(-4px); border-color: #3c4ab5; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1); }
-        
         /* Banner de Cookies Otimizado */
         #cookie-banner { 
             position: fixed; 
@@ -82,56 +64,41 @@
             gap: 1rem; 
             box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
+            visibility: hidden; /* Invisível até o script de tradução rodar */
         }
-
-        /* Mobile: Discreto e centralizado (Estilo Cartão) */
         @media (max-width: 767px) {
-            #cookie-banner {
-                bottom: 1rem;
-                left: 5%;
-                right: 5%;
-                width: 90%;
-                padding: 1rem;
-                border-radius: 1rem;
-                border: 1px solid #e2e8f0;
-            }
+            #cookie-banner { bottom: 1rem; left: 5%; right: 5%; width: 90%; padding: 1rem; border-radius: 1rem; border: 1px solid #e2e8f0; }
+        }
+        @media (min-width: 768px) { 
+            #cookie-banner { bottom: 0; left: 0; width: 100%; flex-direction: row; padding: 1.5rem 10%; justify-content: center; gap: 3rem; border-top: 1px solid #e2e8f0; } 
         }
 
-        /* Desktop: Barra Full Width (Acompanha a tela toda) */
-        @media (min-width: 768px) { 
-            #cookie-banner { 
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                flex-direction: row; 
-                padding: 1.5rem 10%; 
-                justify-content: center;
-                gap: 3rem;
-                border-top: 1px solid #e2e8f0;
-            } 
-        }
+        .btn-cta { background: #b8c54c; color: #242c5c; font-weight: 800; transition: all 0.2s ease; border-radius: 8px; }
+        .btn-cta:hover { background: #a3b137; transform: translateY(-2px); box-shadow: 0 12px 28px rgba(184, 197, 76, 0.4); }
+        .country-card { transition: transform 0.2s ease, box-shadow 0.2s ease; border: 2px solid #f1f5f9; }
+        .country-card:hover { transform: translateY(-4px); border-color: #3c4ab5; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1); }
     </style>
 </head>
 
 <body class="bg-white">
 
-    <!-- COOKIE CONSENT (Configurado para Desktop Full Width e Mobile Discreto) -->
+    <!-- COOKIE CONSENT -->
     <div id="cookie-banner">
-        <p class="text-[11px] md:text-[13px] text-brand-muted max-w-2xl text-center md:text-left leading-relaxed">
-            Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die Nutzung unserer Website stimmen Sie unserer 
-            <button onclick="openModal('privacyModal')" class="underline hover:text-brand-navy font-semibold">Datenschutzrichtlinie</button> zu.
+        <p class="text-[11px] md:text-[13px] text-brand-muted max-w-2xl text-center md:text-left leading-relaxed" data-i18n="cookie_text">
+            Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die Nutzung unserer Website stimmen Sie unserer Datenschutzrichtlinie zu.
         </p>
         <button onclick="document.getElementById('cookie-banner').style.display='none'" 
-                class="bg-brand-navy text-white text-[11px] md:text-[13px] px-12 py-3 rounded-full font-bold shadow-sm hover:bg-brand-teal transition-all active:scale-95 shrink-0">
+                class="bg-brand-navy text-white text-[11px] md:text-[13px] px-10 py-3 rounded-full font-bold shadow-sm hover:bg-brand-teal transition-all active:scale-95 shrink-0"
+                data-i18n="cookie_btn">
             Akzeptieren
         </button>
     </div>
 
     <!-- 1. TOP INFO BAR -->
     <div class="bg-brand-navy text-white text-[10px] md:text-xs font-bold tracking-widest py-2 px-4 w-full z-50 flex justify-center uppercase items-center gap-4 md:gap-10">
-        <div class="flex items-center gap-2"><i class="fa-solid fa-rotate-left"></i> 60-TAGE GELD-ZURÜCK-GARANTIE</div>
-        <div class="hidden sm:flex items-center gap-2"><i class="fa-solid fa-truck-fast"></i> DISKRETER EU-VERSAND</div>
-        <div class="hidden md:flex items-center gap-2"><i class="fa-solid fa-shield-check"></i> 100% NATÜRLICH</div>
+        <div class="flex items-center gap-2" data-i18n="top_bar_1"><i class="fa-solid fa-rotate-left"></i> 60-TAGE GELD-ZURÜCK-GARANTIE</div>
+        <div class="hidden sm:flex items-center gap-2" data-i18n="top_bar_2"><i class="fa-solid fa-truck-fast"></i> DISKRETER EU-VERSAND</div>
+        <div class="hidden md:flex items-center gap-2" data-i18n="top_bar_3"><i class="fa-solid fa-shield-check"></i> 100% NATÜRLICH</div>
     </div>
 
     <!-- 2. NAVIGATION -->
@@ -139,12 +106,12 @@
         <div class="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
             <a href="#" class="font-display text-2xl font-bold text-brand-navy tracking-wide uppercase">SLIMANOL</a>
             <div class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase text-gray-500 tracking-wider">
-                <a href="#ingredients" class="hover:text-brand-navy transition">Inhaltsstoffe</a>
-                <a href="#how-it-works" class="hover:text-brand-navy transition">Wirkung</a>
-                <a href="#reviews" class="hover:text-brand-navy transition">Erfahrungen</a>
+                <a href="#ingredients" class="hover:text-brand-navy transition" data-i18n="nav_1">Inhaltsstoffe</a>
+                <a href="#how-it-works" class="hover:text-brand-navy transition" data-i18n="nav_2">Wirkung</a>
+                <a href="#reviews" class="hover:text-brand-navy transition" data-i18n="nav_3">Erfahrungen</a>
                 <a href="#faq" class="hover:text-brand-navy transition">FAQ</a>
             </div>
-            <a href="#order" class="btn-cta px-4 py-2.5 text-[11px] uppercase shadow-sm">
+            <a href="#order" class="btn-cta px-4 py-2.5 text-[11px] uppercase shadow-sm" data-i18n="nav_cta">
                 JETZT BESTELLEN <i class="fa-solid fa-cart-shopping ml-2"></i>
             </a>
         </div>
@@ -154,230 +121,149 @@
     <section class="text-white bg-brand-navy relative" style="background: radial-gradient(circle at 70% 50%, #3c4ab5 0%, #242c5c 100%);">
         <div class="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24 flex flex-col lg:flex-row items-center gap-12">
             <div class="flex-1 text-center lg:text-left z-10">
-                <span class="inline-block bg-brand-gold/20 text-brand-gold text-[11px] font-black tracking-[0.2em] uppercase px-3 py-1 rounded mb-6 border border-brand-gold/30">Nr. 1 Stoffwechsel-Formel</span>
-                <h1 class="font-display text-4xl md:text-6xl font-bold leading-[1.1] mb-6">
+                <span class="inline-block bg-brand-gold/20 text-brand-gold text-[11px] font-black tracking-[0.2em] uppercase px-3 py-1 rounded mb-6 border border-brand-gold/30" data-i18n="hero_badge">Nr. 1 Stoffwechsel-Formel</span>
+                <h1 class="font-display text-4xl md:text-6xl font-bold leading-[1.1] mb-6" data-i18n="hero_title">
                     Hören Sie auf, gegen Ihren Stoffwechsel zu <span class="italic text-brand-gold underline decoration-brand-gold/30">kämpfen.</span>
                 </h1>
-                <p class="text-brand-textLight text-lg md:text-xl leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
+                <p class="text-brand-textLight text-lg md:text-xl leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0" data-i18n="hero_desc">
                     Slimanol reaktiviert Ihre natürliche Fettverbrennung durch eine hochkonzentrierte liposomale Formel. Weniger Heißhunger, mehr Energie, keine Stimulanzien.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mb-10">
-                    <a href="#order" class="btn-cta w-full sm:w-auto text-lg px-12 py-5 shadow-2xl uppercase tracking-wider group">
+                    <a href="#order" class="btn-cta w-full sm:w-auto text-lg px-12 py-5 shadow-2xl uppercase tracking-wider group" data-i18n="hero_btn">
                         ANGEBOT PRÜFEN <i class="fa-solid fa-chevron-right ml-3 group-hover:translate-x-1 transition-transform"></i>
                     </a>
                 </div>
-                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-[10px] uppercase font-bold text-brand-textLight/60 tracking-widest">
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-flask-vial text-brand-gold"></i> Laborgeprüft</span>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-leaf text-brand-gold"></i> Vegan & Rein</span>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-earth-europe text-brand-gold"></i> Hergestellt in der EU</span>
-                </div>
             </div>
             <div class="w-full max-w-[450px] relative">
-                <div class="absolute inset-0 bg-brand-teal rounded-full blur-[100px] opacity-20"></div>
-                <img src="imgi_2_public.webp" alt="Slimanol Kapseln" class="relative w-full h-auto drop-shadow-[0_35px_60px_rgba(0,0,0,0.6)] hover:scale-105 transition-transform duration-700">
+                <img src="imgi_2_public.webp" alt="Slimanol Kapseln" class="relative w-full h-auto drop-shadow-[0_35px_60px_rgba(0,0,0,0.6)]">
             </div>
-        </div>
-    </section>
-
-    <!-- 4. TRUST STRIP -->
-    <section class="bg-white py-8 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-around items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all">
-            <div class="flex items-center gap-2 font-display font-bold text-brand-navy uppercase text-[11px] tracking-widest"><i class="fa-solid fa-certificate"></i> GMP Certified</div>
-            <div class="flex items-center gap-2 font-display font-bold text-brand-navy uppercase text-[11px] tracking-widest"><i class="fa-solid fa-microscope"></i> Clinically Studied</div>
-            <div class="flex items-center gap-2 font-display font-bold text-brand-navy uppercase text-[11px] tracking-widest"><i class="fa-solid fa-box-open"></i> Discrete Shipping</div>
         </div>
     </section>
 
     <!-- 5. COUNTRY SELECTOR -->
     <section class="bg-brand-offWhite py-16 md:py-24" id="order">
         <div class="max-w-5xl mx-auto px-4 text-center">
-            <p class="text-brand-gold font-black uppercase tracking-[0.3em] text-[10px] mb-4">Offizielle Bestellung</p>
-            <h2 class="font-display text-3xl md:text-5xl font-bold text-brand-navy mb-12">Wählen Sie Ihr Lieferland:</h2>
+            <h2 class="font-display text-3xl md:text-5xl font-bold text-brand-navy mb-12" data-i18n="order_title">Wählen Sie Ihr Lieferland:</h2>
             <div class="flex flex-wrap justify-center gap-8">
-                <!-- Deutschland -->
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2S3BX2C1/?uid=49999" target="_blank" class="country-card group bg-white rounded-3xl px-8 py-12 w-full sm:w-[280px] flex flex-col items-center shadow-sm">
-                    <img src="https://flagcdn.com/w160/de.png" alt="Deutschland" class="w-24 mb-6 shadow-md border border-gray-100 rounded">
-                    <span class="font-display text-2xl font-bold text-brand-navy group-hover:text-brand-teal transition">Deutschland</span>
-                    <span class="text-xs text-green-600 font-black mt-4 bg-green-50 px-4 py-2 rounded-full uppercase tracking-tighter"><i class="fa-solid fa-check-double mr-1"></i> Auf Lager</span>
+                    <img src="https://flagcdn.com/w160/de.png" alt="DE" class="w-24 mb-6 shadow-md border rounded">
+                    <span class="font-display text-2xl font-bold text-brand-navy">Deutschland</span>
+                    <span class="text-xs text-green-600 font-black mt-4 bg-green-50 px-4 py-2 rounded-full uppercase tracking-tighter" data-i18n="stock_de">Auf Lager</span>
                 </a>
-                <!-- Dänemark -->
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2S39J5LD/?uid=49997" target="_blank" class="country-card group bg-white rounded-3xl px-8 py-12 w-full sm:w-[280px] flex flex-col items-center shadow-sm">
-                    <img src="https://flagcdn.com/w160/dk.png" alt="Dänemark" class="w-24 mb-6 shadow-md border border-gray-100 rounded">
-                    <span class="font-display text-2xl font-bold text-brand-navy group-hover:text-brand-teal transition">Dänemark</span>
-                    <span class="text-xs text-green-600 font-black mt-4 bg-green-50 px-4 py-2 rounded-full uppercase tracking-tighter"><i class="fa-solid fa-check-double mr-1"></i> På lager</span>
+                    <img src="https://flagcdn.com/w160/dk.png" alt="DK" class="w-24 mb-6 shadow-md border rounded">
+                    <span class="font-display text-2xl font-bold text-brand-navy">Dänemark</span>
+                    <span class="text-xs text-green-600 font-black mt-4 bg-green-50 px-4 py-2 rounded-full uppercase tracking-tighter" data-i18n="stock_dk">Auf Lager</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 6. INGREDIENTS SECTION -->
-    <section class="py-20 bg-white" id="ingredients">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="font-display text-3xl md:text-5xl font-bold text-brand-navy mb-4">Wissenschaftlich fundierte Inhaltsstoffe</h2>
-                <div class="w-20 h-1 bg-brand-gold mx-auto"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-8 border border-gray-100 rounded-3xl bg-brand-offWhite hover:border-brand-gold transition duration-500">
-                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-brand-gold font-bold">1</div>
-                    <h3 class="font-bold text-brand-navy text-xl mb-3">Chrom</h3>
-                    <p class="text-brand-muted text-sm leading-relaxed">Trägt zur Aufrechterhaltung eines normalen Blutzuckerspiegels bei und unterstützt den Makronährstoff-Stoffwechsel.</p>
-                </div>
-                <div class="p-8 border border-gray-100 rounded-3xl bg-brand-offWhite hover:border-brand-gold transition duration-500">
-                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-brand-gold font-bold">2</div>
-                    <h3 class="font-bold text-brand-navy text-xl mb-3">Berberin</h3>
-                    <p class="text-brand-muted text-sm leading-relaxed">Ein kraftvolles Alkaloid aus Berberis aristata, das traditionell zur Unterstützung der metabolischen Gesundheit genutzt wird.</p>
-                </div>
-                <div class="p-8 border border-gray-100 rounded-3xl bg-brand-offWhite hover:border-brand-gold transition duration-500">
-                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-brand-gold font-bold">3</div>
-                    <h3 class="font-bold text-brand-navy text-xl mb-3">EGCG (Grüntee)</h3>
-                    <p class="text-brand-muted text-sm leading-relaxed">Hochkonzentrierter Extrakt aus grünem Tee, bekannt für seine antioxidativen Eigenschaften und Stoffwechsel-Support.</p>
-                </div>
-                <div class="p-8 border border-gray-100 rounded-3xl bg-brand-offWhite hover:border-brand-gold transition duration-500">
-                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-brand-gold font-bold">4</div>
-                    <h3 class="font-bold text-brand-navy text-xl mb-3">Mariendistel</h3>
-                    <p class="text-brand-muted text-sm leading-relaxed">Unterstützt die Leberfunktion und die körpereigene Entgiftung, was für einen gesunden Fettstoffwechsel essenziell ist.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. DETAILED SEO CONTENT BLOCK -->
+    <!-- SEO CONTENT BLOCK (Localized) -->
     <section class="py-20 bg-brand-offWhite border-y border-gray-200" id="product-info">
         <div class="max-w-5xl mx-auto px-4 text-sm text-brand-muted leading-relaxed space-y-8">
-            <div>
+            <div data-i18n="seo_text_1">
                 <h2 class="text-2xl font-display font-bold text-brand-navy mb-4 uppercase tracking-wide">Slimanol Kapseln: Erfahrungen und Bewertungen zum Inhaltsstoffe Test</h2>
-                <p>Der Stoffwechsel spielt eine zentrale Rolle bei der Gewichtsreduktion. Viele Anwender berichten von Schwierigkeiten, auf natürliche Weise abspecken zu können. Hier kommt die <strong>Slimanol</strong> Formel mit ihrer fortschrittlichen <strong>Zusammensetzung</strong> ins Spiel. Dieses pflanzliche Nahrungsergänzungsmittel zielt darauf ab, den Blutzuckerspiegels zu regulieren und Heißhungerattacken zu minimieren. In umfassenden Analysen und einem detaillierten <strong>Slimanol im Test</strong> untersuchen wir, wie effizient dieses produkt wirklich ist.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div>
-                    <h3 class="text-lg font-bold text-brand-navy mb-3">Wirkung und Vorteile von Slimanol</h3>
-                    <p>Die <strong>Wirkung der Kapseln</strong> beruht auf einer gut verträglichen Mischung. Das Herzstück der <strong>Slimanol Inhaltsstoffe</strong> bildet die <strong>liposomale</strong> Technologie, wodurch die Bioverfügbarkeit maximiert wird. <strong>Grüner Tee-Extrakt (EGCG)</strong>, beruhigende <strong>Mariendistel</strong> und wertvolles <strong>Chrom</strong> unterstützen gemeinsam eine ausgewogene Ernährung. Ein weiterer Wirkstoff ist <strong>Berberin</strong>. Durch diese <strong>Inhaltsstoffe von Slimanol</strong> berichten Anwender von einer effektive Unterstützung beim Abnehmen.</p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold text-brand-navy mb-3">Einnahme, Dosierung und Sicherheit</h3>
-                    <p>Die <strong>Einnahme von Slimanol</strong> ist unkompliziert. Die empfohlene <strong>Slimanol Dosierung</strong> umfasst 2 Kapseln täglich. Jede Dose enthält <strong>60 Kapseln</strong>, was für einen Monatsbedarf reicht. Wenn Sie <strong>Slimanol regelmäßig</strong> nehmen, wird empfohlen, dies stets in Kombination mit ausgewogene Ernährung zu tun. Aufgrund seiner <strong>pflanzlichen Zusammensetzung</strong> wird das produkt hinsichtlich der <strong>Verträglichkeit</strong> als sehr gut eingestuft.</p>
-                </div>
+                <p>Der Stoffwechsel spielt eine zentrale Rolle bei der Gewichtsreduktion. Viele Anwender berichten von Schwierigkeiten, auf natürliche Weise abspecken zu können. Hier kommt die Slimanol Formel ins Spiel.</p>
             </div>
         </div>
     </section>
 
-    <!-- 8. FAQ SECTION (SANFONA EFFECT) -->
+    <!-- FAQ -->
     <section class="py-20 bg-white" id="faq">
         <div class="max-w-3xl mx-auto px-4">
-            <h2 class="font-display text-3xl md:text-5xl font-bold text-brand-navy text-center mb-16">Häufig gestellte Fragen</h2>
+            <h2 class="font-display text-3xl md:text-5xl font-bold text-brand-navy text-center mb-16" data-i18n="faq_title">Häufig gestellte Fragen</h2>
             <div class="space-y-4">
-                <!-- Q1 -->
-                <div class="faq-item group border rounded-2xl border-gray-100 px-6 cursor-pointer hover:border-brand-teal transition duration-300" onclick="toggleFaq(this)">
+                <div class="faq-item group border rounded-2xl border-gray-100 px-6 cursor-pointer" onclick="toggleFaq(this)">
                     <div class="flex items-center justify-between py-6">
-                        <span class="font-bold text-brand-navy group-hover:text-brand-teal transition-colors">Ist Slimanol sicher in der Anwendung?</span>
-                        <span class="faq-icon text-gray-400 font-bold text-2xl"><i class="fa-solid fa-plus"></i></span>
+                        <span class="font-bold text-brand-navy" data-i18n="q1">Ist Slimanol sicher in der Anwendung?</span>
+                        <span class="faq-icon text-gray-400 font-bold text-2xl">+</span>
                     </div>
                     <div class="faq-body">
-                        <div class="pb-6 text-sm text-brand-muted leading-relaxed">
-                            Ja. Slimanol wird mit 100 % natürlichen, klinisch untersuchten Inhaltsstoffen formuliert und in einer zertifizierten Anlage nach strengen europäischen GMP-Standards hergestellt. Es enthält keine aggressiven Stimulanzien.
-                        </div>
-                    </div>
-                </div>
-                <!-- Q2 -->
-                <div class="faq-item group border rounded-2xl border-gray-100 px-6 cursor-pointer hover:border-brand-teal transition duration-300" onclick="toggleFaq(this)">
-                    <div class="flex items-center justify-between py-6">
-                        <span class="font-bold text-brand-navy group-hover:text-brand-teal transition-colors">Wie schnell kann ich mit Ergebnissen rechnen?</span>
-                        <span class="faq-icon text-gray-400 font-bold text-2xl"><i class="fa-solid fa-plus"></i></span>
-                    </div>
-                    <div class="faq-body">
-                        <div class="pb-6 text-sm text-brand-muted leading-relaxed">
-                            Die meisten Anwender bemerken Verbesserungen bei der Verdauung, dem Energieniveau und verringertem Heißhunger innerhalb von 2 bis 4 Wochen. Sichtbare Ziele im Gewichtsmanagement werden typischerweise nach 8 bis 12 Wochen konsequenter Anwendung erreicht.
-                        </div>
-                    </div>
-                </div>
-                <!-- Q3 -->
-                <div class="faq-item group border rounded-2xl border-gray-100 px-6 cursor-pointer hover:border-brand-teal transition duration-300" onclick="toggleFaq(this)">
-                    <div class="flex items-center justify-between py-6">
-                        <span class="font-bold text-brand-navy group-hover:text-brand-teal transition-colors">Wie nehme ich Slimanol ein?</span>
-                        <span class="faq-icon text-gray-400 font-bold text-2xl"><i class="fa-solid fa-plus"></i></span>
-                    </div>
-                    <div class="faq-body">
-                        <div class="pb-6 text-sm text-brand-muted leading-relaxed">
-                            Nehmen Sie täglich 2 Kapseln ein, idealerweise 20-30 Minuten vor Ihrer Hauptmahlzeit mit einem vollen Glas Wasser. Für optimale Ergebnisse wird eine regelmäßige Einnahme über 60 Tage empfohlen.
-                        </div>
-                    </div>
-                </div>
-                <!-- Q4 -->
-                <div class="faq-item group border rounded-2xl border-gray-100 px-6 cursor-pointer hover:border-brand-teal transition duration-300" onclick="toggleFaq(this)">
-                    <div class="flex items-center justify-between py-6">
-                        <span class="font-bold text-brand-navy group-hover:text-brand-teal transition-colors">Was ist, wenn es bei mir nicht wirkt?</span>
-                        <span class="faq-icon text-gray-400 font-bold text-2xl"><i class="fa-solid fa-plus"></i></span>
-                    </div>
-                    <div class="faq-body">
-                        <div class="pb-6 text-sm text-brand-muted leading-relaxed">
-                            Wir bieten eine volle 60-Tage Geld-zurück-Garantie. Wenn Sie mit Ihrer Transformation nicht zufrieden sind, kontaktieren Sie einfach das Support-Team des Herstellers für eine vollständige Rückerstattung.
-                        </div>
+                        <div class="pb-6 text-sm text-brand-muted leading-relaxed" data-i18n="a1">Ja. Slimanol wird mit 100 % natürlichen Inhaltsstoffen formuliert e é fabricado sob normas estritas de GMP.</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 9. FOOTER & DISCLAIMERS -->
-    <footer class="bg-brand-navy text-brand-muted py-16 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 text-center md:text-left">
-            <div class="flex flex-wrap justify-center md:justify-start gap-8 mb-12 text-xs font-bold uppercase tracking-widest text-white">
-                <button onclick="openModal('contactModal')" class="hover:text-brand-gold transition">Kontakt</button>
-                <button onclick="openModal('privacyModal')" class="hover:text-brand-gold transition">Datenschutz</button>
-                <button onclick="openModal('impressumModal')" class="hover:text-brand-gold transition">Impressum</button>
-            </div>
-            
-            <div class="space-y-6 text-[10px] text-brand-muted/80 pt-10 border-t border-white/5">
-                <p><strong>WICHTIGER HINWEIS:</strong> Diese Website (slimanol24.vercel.app) ist ein unabhängiges Informationsportal und Advertorial. Wir sind unabhängige Werbepartner (Distributoren) und nicht der Hersteller. Alle Verkäufe werden über die offizielle Seite des Herstellers abgewickelt.</p>
-                <p>Nahrungsergänzungsmittel sollten nicht als Ersatz für eine ausgewogene Ernährung verwendet werden. Konsultieren Sie immer einen Arzt, bevor Sie eine neue Diät oder Supplementierung beginnen. Die Ergebnisse können von Person zu Person variieren.</p>
-                <p class="text-center pt-8">&copy; 2026 Slimanol Independent Network. Alle Rechte vorbehalten.</p>
-            </div>
+    <!-- FOOTER -->
+    <footer class="bg-brand-navy text-brand-muted py-16 border-t border-white/5 text-[10px] text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="mb-6" data-i18n="footer_warn">WICHTIGER HINWEIS: Diese Website ist ein unabhängiges Informationsportal und Advertorial. Wir sind unabhängige Werbepartner.</p>
+            <p>&copy; 2026 Slimanol Independent Network. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 
-    <!-- MODALS -->
-    <div id="contactModal" class="modal"><div class="bg-white p-8 rounded-3xl max-w-md m-4 shadow-2xl">
-        <h3 class="font-bold text-xl text-brand-navy mb-4">Kontakt Support</h3>
-        <p class="text-sm leading-relaxed mb-6">Bei Fragen zu Ihrer Bestellung wenden Sie sich bitte an den Hersteller über die Daten in Ihrer Bestätigungs-E-Mail.</p>
-        <button onclick="closeModals()" class="w-full bg-brand-navy text-white px-6 py-3 rounded-xl font-bold uppercase text-xs tracking-widest">Schließen</button>
-    </div></div>
-
-    <div id="impressumModal" class="modal"><div class="bg-white p-8 rounded-3xl max-w-md m-4 shadow-2xl">
-        <h3 class="font-bold text-xl text-brand-navy mb-4">Impressum</h3>
-        <div class="text-xs space-y-4 text-brand-muted">
-            <p><strong>Slimanol Independent Distributor</strong></p>
-            <p>Represented by: Digital Marketing Solutions Ltd.</p>
-            <p>Email: info@slimanol24.vercel.app</p>
-        </div>
-        <button onclick="closeModals()" class="w-full bg-brand-navy text-white px-6 py-3 rounded-xl font-bold uppercase text-xs tracking-widest mt-6">Schließen</button>
-    </div></div>
-
-    <div id="privacyModal" class="modal"><div class="bg-white p-8 rounded-3xl max-w-lg m-4 shadow-2xl overflow-y-auto max-h-[80vh]">
-        <h3 class="font-bold text-xl text-brand-navy mb-4">Datenschutz</h3>
-        <div class="text-xs space-y-4 text-brand-muted text-left">
-            <p>Wir respektieren Ihre Privatsphäre. Auf dieser Seite werden keine persönlichen Bestelldaten gespeichert. Tracking erfolgt lediglich zur Messung der Werbeeffizienz (Google Ads/Facebook Pixel).</p>
-        </div>
-        <button onclick="closeModals()" class="w-full bg-brand-navy text-white px-6 py-3 rounded-xl font-bold uppercase text-xs tracking-widest mt-6">Schließen</button>
-    </div></div>
-
     <script>
-        // Lógica de Sanfona (Accordion)
-        function toggleFaq(element) {
-            const isActive = element.classList.contains('open');
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('open');
-            });
-            if (!isActive) {
-                element.classList.add('open');
+        // Sistema de Tradução Dinâmica (Alemão vs Dinamarquês)
+        const translations = {
+            de: {
+                cookie_text: "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die Nutzung unserer Website stimmen Sie unserer Datenschutzrichtlinie zu.",
+                cookie_btn: "Akzeptieren",
+                top_bar_1: "60-TAGE GELD-ZURÜCK-GARANTIE",
+                top_bar_2: "DISKRETER EU-VERSAND",
+                top_bar_3: "100% NATÜRLICH",
+                nav_1: "Inhaltsstoffe", nav_2: "Wirkung", nav_3: "Erfahrungen", nav_cta: "JETZT BESTELLEN",
+                hero_badge: "Nr. 1 Stoffwechsel-Formel",
+                hero_title: "Hören Sie auf, gegen Ihren Stoffwechsel zu kämpfen.",
+                hero_desc: "Slimanol reaktiviert Ihre natürliche Fettverbrennung durch eine hochkonzentrierte liposomale Formel.",
+                hero_btn: "ANGEBOT PRÜFEN",
+                order_title: "Wählen Sie Ihr Lieferland:",
+                stock_de: "Auf Lager", stock_dk: "Auf Lager",
+                faq_title: "Häufig gestellte Fragen",
+                q1: "Ist Slimanol sicher in der Anwendung?",
+                a1: "Ja. Slimanol wird mit 100 % natürlichen Inhaltsstoffen formuliert und sicher hergestellt.",
+                footer_warn: "WICHTIGER HINWEIS: Diese Website é um Advertorial independente."
+            },
+            da: {
+                cookie_text: "Vi bruger cookies til at forbedre din oplevelse. Ved at bruge vores hjemmeside accepterer du vores privatlivspolitik.",
+                cookie_btn: "Accepter",
+                top_bar_1: "60-DAGES PENGE-TILBAGE-GARANTI",
+                top_bar_2: "DISKRET EU-FORSENDELSE",
+                top_bar_3: "100% NATURLIGT",
+                nav_1: "Ingredienser", nav_2: "Effekt", nav_3: "Erfaringer", nav_cta: "BESTIL NU",
+                hero_badge: "Nr. 1 Stofskifte-formel",
+                hero_title: "Stop med at kæmpe mod dit stofskifte.",
+                hero_desc: "Slimanol genaktiverer din naturlige fedtforbrænding gennem en højkoncentreret liposomal formel.",
+                hero_btn: "TJEK TILBUD",
+                order_title: "Vælg dit leveringsland:",
+                stock_de: "På lager", stock_dk: "På lager",
+                faq_title: "Ofte stillede spørgsmål",
+                q1: "Er Slimanol sikkert at bruge?",
+                a1: "Ja. Slimanol er formuleret med 100% naturlige ingredienser og fremstillet sikkert.",
+                footer_warn: "VIGTIG BEMÆRKNING: Denne hjemmeside er en uafhængig informationsportal."
             }
+        };
+
+        function localize() {
+            const browserLang = navigator.language.split('-')[0].toLowerCase();
+            const lang = (browserLang === 'da') ? 'da' : 'de';
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    if (el.innerHTML.includes('<i')) {
+                        const icon = el.querySelector('i').outerHTML;
+                        el.innerHTML = icon + ' ' + translations[lang][key].replace(/<i.*<\/i>/, '');
+                    } else {
+                        el.innerText = translations[lang][key];
+                    }
+                }
+            });
+            document.getElementById('cookie-banner').style.visibility = 'visible';
         }
 
-        // Controlos de Modal
-        function openModal(id) { document.getElementById(id).classList.add('active'); document.body.style.overflow = 'hidden'; }
-        function closeModals() { document.querySelectorAll('.modal').forEach(m => m.classList.remove('active')); document.body.style.overflow = 'auto'; }
-        window.onclick = e => { if (e.target.classList.contains('modal')) closeModals(); }
-        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModals(); });
+        window.onload = localize;
+
+        function toggleFaq(element) {
+            const isActive = element.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('open'));
+            if (!isActive) element.classList.add('open');
+        }
+
+        function openModal(id) { document.getElementById(id).classList.add('active'); }
+        function closeModals() { document.querySelectorAll('.modal').forEach(m => m.classList.remove('active')); }
     </script>
 </body>
 </html>
