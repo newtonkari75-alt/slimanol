@@ -71,31 +71,43 @@
         .country-card { transition: transform 0.2s ease, box-shadow 0.2s ease; border: 2px solid #f1f5f9; }
         .country-card:hover { transform: translateY(-4px); border-color: #3c4ab5; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1); }
         
-        /* Banner de Cookies Otimizado (Mobile Discreto) */
+        /* Banner de Cookies Otimizado */
         #cookie-banner { 
             position: fixed; 
-            bottom: 1.5rem; 
-            left: 50%; 
-            transform: translateX(-50%); 
-            background: #ffffff; 
-            border: 1px solid #e2e8f0; 
             z-index: 2000; 
-            padding: 1.25rem; 
+            background: #ffffff; 
             display: flex; 
             flex-direction: column; 
             align-items: center; 
             gap: 1rem; 
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 600px;
-            border-radius: 1.5rem;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
         }
+
+        /* Mobile: Discreto e centralizado (Estilo Cartão) */
+        @media (max-width: 767px) {
+            #cookie-banner {
+                bottom: 1rem;
+                left: 5%;
+                right: 5%;
+                width: 90%;
+                padding: 1rem;
+                border-radius: 1rem;
+                border: 1px solid #e2e8f0;
+            }
+        }
+
+        /* Desktop: Barra Full Width (Acompanha a tela toda) */
         @media (min-width: 768px) { 
             #cookie-banner { 
+                bottom: 0;
+                left: 0;
+                width: 100%;
                 flex-direction: row; 
-                padding: 1rem 2rem; 
-                justify-content: space-between;
-                bottom: 2rem;
+                padding: 1.5rem 10%; 
+                justify-content: center;
+                gap: 3rem;
+                border-top: 1px solid #e2e8f0;
             } 
         }
     </style>
@@ -103,14 +115,14 @@
 
 <body class="bg-white">
 
-    <!-- COOKIE CONSENT (Configuração Ajustada conforme Imagem) -->
+    <!-- COOKIE CONSENT (Configurado para Desktop Full Width e Mobile Discreto) -->
     <div id="cookie-banner">
-        <p class="text-[11px] md:text-xs text-brand-muted max-w-md text-center md:text-left leading-relaxed">
-            Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die Nutzung stimmen Sie unserer 
-            <button onclick="openModal('privacyModal')" class="underline hover:text-brand-navy">Datenschutzrichtlinie</button> zu.
+        <p class="text-[11px] md:text-[13px] text-brand-muted max-w-2xl text-center md:text-left leading-relaxed">
+            Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die Nutzung unserer Website stimmen Sie unserer 
+            <button onclick="openModal('privacyModal')" class="underline hover:text-brand-navy font-semibold">Datenschutzrichtlinie</button> zu.
         </p>
         <button onclick="document.getElementById('cookie-banner').style.display='none'" 
-                class="bg-brand-navy text-white text-[11px] md:text-xs px-10 py-3 rounded-full font-bold shadow-md hover:bg-brand-teal transition-all active:scale-95 shrink-0">
+                class="bg-brand-navy text-white text-[11px] md:text-[13px] px-12 py-3 rounded-full font-bold shadow-sm hover:bg-brand-teal transition-all active:scale-95 shrink-0">
             Akzeptieren
         </button>
     </div>
@@ -170,9 +182,9 @@
     <!-- 4. TRUST STRIP -->
     <section class="bg-white py-8 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-around items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all">
-            <div class="flex items-center gap-2 font-display font-bold text-brand-navy"><i class="fa-solid fa-certificate"></i> GMP CERTIFIED</div>
-            <div class="flex items-center gap-2 font-display font-bold text-brand-navy"><i class="fa-solid fa-microscope"></i> CLINICALLY STUDIED</div>
-            <div class="flex items-center gap-2 font-display font-bold text-brand-navy"><i class="fa-solid fa-box-open"></i> DISCRETE SHIPPING</div>
+            <div class="flex items-center gap-2 font-display font-bold text-brand-navy uppercase text-[11px] tracking-widest"><i class="fa-solid fa-certificate"></i> GMP Certified</div>
+            <div class="flex items-center gap-2 font-display font-bold text-brand-navy uppercase text-[11px] tracking-widest"><i class="fa-solid fa-microscope"></i> Clinically Studied</div>
+            <div class="flex items-center gap-2 font-display font-bold text-brand-navy uppercase text-[11px] tracking-widest"><i class="fa-solid fa-box-open"></i> Discrete Shipping</div>
         </div>
     </section>
 
