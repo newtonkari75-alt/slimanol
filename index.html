@@ -59,7 +59,7 @@
         .modal { display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 1000; justify-content: center; align-items: flex-start; padding-top: 5vh; backdrop-filter: blur(4px); opacity: 0; transition: opacity 0.3s ease; }
         .modal.active { display: flex; opacity: 1; }
         
-        /* Efeito Sanfona FAQ */
+        /* FAQ Sanfona */
         .faq-item .faq-body { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .faq-item.open .faq-body { max-height: 500px; }
         .faq-item .faq-icon { transition: transform 0.3s ease; }
@@ -71,16 +71,48 @@
         .country-card { transition: transform 0.2s ease, box-shadow 0.2s ease; border: 2px solid #f1f5f9; }
         .country-card:hover { transform: translateY(-4px); border-color: #3c4ab5; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1); }
         
-        #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #e2e8f0; z-index: 2000; padding: 1rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; box-shadow: 0 -4px 10px rgba(0,0,0,0.05); }
+        /* Banner de Cookies Otimizado (Mobile Discreto) */
+        #cookie-banner { 
+            position: fixed; 
+            bottom: 1.5rem; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            background: #ffffff; 
+            border: 1px solid #e2e8f0; 
+            z-index: 2000; 
+            padding: 1.25rem; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 1rem; 
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            border-radius: 1.5rem;
+        }
+        @media (min-width: 768px) { 
+            #cookie-banner { 
+                flex-direction: row; 
+                padding: 1rem 2rem; 
+                justify-content: space-between;
+                bottom: 2rem;
+            } 
+        }
     </style>
 </head>
 
 <body class="bg-white">
 
-    <!-- COOKIE CONSENT -->
+    <!-- COOKIE CONSENT (Configuração Ajustada conforme Imagem) -->
     <div id="cookie-banner">
-        <p class="text-xs text-brand-muted max-w-2xl text-center md:text-left">Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die Nutzung stimmen Sie unserer <button onclick="openModal('privacyModal')" class="underline">Datenschutzrichtlinie</button> zu.</p>
-        <button onclick="document.getElementById('cookie-banner').style.display='none'" class="bg-brand-navy text-white text-xs px-6 py-2 rounded-full font-bold">Akzeptieren</button>
+        <p class="text-[11px] md:text-xs text-brand-muted max-w-md text-center md:text-left leading-relaxed">
+            Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die Nutzung stimmen Sie unserer 
+            <button onclick="openModal('privacyModal')" class="underline hover:text-brand-navy">Datenschutzrichtlinie</button> zu.
+        </p>
+        <button onclick="document.getElementById('cookie-banner').style.display='none'" 
+                class="bg-brand-navy text-white text-[11px] md:text-xs px-10 py-3 rounded-full font-bold shadow-md hover:bg-brand-teal transition-all active:scale-95 shrink-0">
+            Akzeptieren
+        </button>
     </div>
 
     <!-- 1. TOP INFO BAR -->
@@ -203,7 +235,7 @@
         <div class="max-w-5xl mx-auto px-4 text-sm text-brand-muted leading-relaxed space-y-8">
             <div>
                 <h2 class="text-2xl font-display font-bold text-brand-navy mb-4 uppercase tracking-wide">Slimanol Kapseln: Erfahrungen und Bewertungen zum Inhaltsstoffe Test</h2>
-                <p>Der Stoffwechsel spielt eine zentrale Rolle bei der Gewichtsreduktion. Viele Anwender berichten von Schwierigkeiten, auf natürliche Weise abspecken zu können. Hier kommt die <strong>Slimanol</strong> Formel mit ihrer fortschrittlichen <strong>Zusammensetzung</strong> ins Spiel. Dieses pflanzliche Nahrungsergänzungsmittel zielt darauf ab, den Blutzuckerspiegels zu regulieren und Heißhungerattacken zu minimieren. In umfassenden Analysen und einem detaillierten <strong>Slimanol im Test</strong> untersuchen wir, wie effizient dieses Produkt wirklich ist.</p>
+                <p>Der Stoffwechsel spielt eine zentrale Rolle bei der Gewichtsreduktion. Viele Anwender berichten von Schwierigkeiten, auf natürliche Weise abspecken zu können. Hier kommt die <strong>Slimanol</strong> Formel mit ihrer fortschrittlichen <strong>Zusammensetzung</strong> ins Spiel. Dieses pflanzliche Nahrungsergänzungsmittel zielt darauf ab, den Blutzuckerspiegels zu regulieren und Heißhungerattacken zu minimieren. In umfassenden Analysen und einem detaillierten <strong>Slimanol im Test</strong> untersuchen wir, wie effizient dieses produkt wirklich ist.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
@@ -212,7 +244,7 @@
                 </div>
                 <div>
                     <h3 class="text-lg font-bold text-brand-navy mb-3">Einnahme, Dosierung und Sicherheit</h3>
-                    <p>Die <strong>Einnahme von Slimanol</strong> ist unkompliziert. Die empfohlene <strong>Slimanol Dosierung</strong> umfasst 2 Kapseln täglich. Jede Dose enthält <strong>60 Kapseln</strong>, was für einen Monatsbedarf reicht. Wenn Sie <strong>Slimanol regelmäßig</strong> nehmen, wird empfohlen, dies stets in Kombination mit ausgewogene Ernährung zu tun. Aufgrund seiner <strong>pflanzlichen Zusammensetzung</strong> wird das Produkt hinsichtlich der <strong>Verträglichkeit</strong> als sehr gut eingestuft.</p>
+                    <p>Die <strong>Einnahme von Slimanol</strong> ist unkompliziert. Die empfohlene <strong>Slimanol Dosierung</strong> umfasst 2 Kapseln täglich. Jede Dose enthält <strong>60 Kapseln</strong>, was für einen Monatsbedarf reicht. Wenn Sie <strong>Slimanol regelmäßig</strong> nehmen, wird empfohlen, dies stets in Kombination mit ausgewogene Ernährung zu tun. Aufgrund seiner <strong>pflanzlichen Zusammensetzung</strong> wird das produkt hinsichtlich der <strong>Verträglichkeit</strong> als sehr gut eingestuft.</p>
                 </div>
             </div>
         </div>
@@ -285,7 +317,7 @@
             </div>
             
             <div class="space-y-6 text-[10px] text-brand-muted/80 pt-10 border-t border-white/5">
-                <p><strong>WICHTIGER HINWEIS:</strong> Diese Website (slimanol24.vercel.app) ist ein unabhängiges Informationsportal und Advertorial. Wir sind unabhängige Werbepartner (Distributoren) e não o fabricante. Alle Verkäufe werden über die offizielle Seite des Herstellers abgewickelt.</p>
+                <p><strong>WICHTIGER HINWEIS:</strong> Diese Website (slimanol24.vercel.app) ist ein unabhängiges Informationsportal und Advertorial. Wir sind unabhängige Werbepartner (Distributoren) und nicht der Hersteller. Alle Verkäufe werden über die offizielle Seite des Herstellers abgewickelt.</p>
                 <p>Nahrungsergänzungsmittel sollten nicht als Ersatz für eine ausgewogene Ernährung verwendet werden. Konsultieren Sie immer einen Arzt, bevor Sie eine neue Diät oder Supplementierung beginnen. Die Ergebnisse können von Person zu Person variieren.</p>
                 <p class="text-center pt-8">&copy; 2026 Slimanol Independent Network. Alle Rechte vorbehalten.</p>
             </div>
@@ -309,17 +341,21 @@
         <button onclick="closeModals()" class="w-full bg-brand-navy text-white px-6 py-3 rounded-xl font-bold uppercase text-xs tracking-widest mt-6">Schließen</button>
     </div></div>
 
+    <div id="privacyModal" class="modal"><div class="bg-white p-8 rounded-3xl max-w-lg m-4 shadow-2xl overflow-y-auto max-h-[80vh]">
+        <h3 class="font-bold text-xl text-brand-navy mb-4">Datenschutz</h3>
+        <div class="text-xs space-y-4 text-brand-muted text-left">
+            <p>Wir respektieren Ihre Privatsphäre. Auf dieser Seite werden keine persönlichen Bestelldaten gespeichert. Tracking erfolgt lediglich zur Messung der Werbeeffizienz (Google Ads/Facebook Pixel).</p>
+        </div>
+        <button onclick="closeModals()" class="w-full bg-brand-navy text-white px-6 py-3 rounded-xl font-bold uppercase text-xs tracking-widest mt-6">Schließen</button>
+    </div></div>
+
     <script>
         // Lógica de Sanfona (Accordion)
         function toggleFaq(element) {
             const isActive = element.classList.contains('open');
-            
-            // Fecha todos os outros itens (efeito sanfona real)
             document.querySelectorAll('.faq-item').forEach(item => {
                 item.classList.remove('open');
             });
-            
-            // Abre apenas o item clicado se ele não estivesse aberto
             if (!isActive) {
                 element.classList.add('open');
             }
